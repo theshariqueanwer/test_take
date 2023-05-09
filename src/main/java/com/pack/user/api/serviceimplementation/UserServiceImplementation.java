@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class UserServiceImplementation implements UserService {
@@ -50,4 +51,10 @@ public class UserServiceImplementation implements UserService {
         userRepository.save(user);
         return user;
     }
+
+    @Override
+    public List<User> getAllUser() {
+        return userRepository.findAll();
+    }
+
 }
