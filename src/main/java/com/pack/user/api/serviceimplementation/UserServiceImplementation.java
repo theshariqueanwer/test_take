@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 @Service
 public class UserServiceImplementation implements UserService {
@@ -37,39 +36,6 @@ public class UserServiceImplementation implements UserService {
         return updatedDateAndTime;
     }
 
-    @Autowired
-    @Inject
-    @PersistantContext
-
-    @EntityManager
-    @Profiler
-    @Qualifer
-    @Value
-    @Primary
-
-    spring core
-    spring aop
-    spring mvc
-    spring security
-    spring rest
-
-
-    private Integer id;
-    private String userId;
-    private Long userCode;
-    private String name;
-    private String email;
-    private String mobile;
-    private String username;
-    private Date createDate;
-    private String createdDate;
-    private List<Date> updatedDate;
-    private List<String> updateDate;
-    private String updateCount;
-    private String initiativeId;
-    private String initiativeName;
-    private String userUniqueCode;
-
     @Override
     public User postUser(User user) {
 
@@ -82,6 +48,6 @@ public class UserServiceImplementation implements UserService {
             user.setUpdatedDate(null);
         }
         userRepository.save(user);
-        return null;
+        return user;
     }
 }

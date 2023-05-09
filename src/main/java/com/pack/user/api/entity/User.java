@@ -33,14 +33,11 @@ public class User {
     private boolean isUpdating = false;
     private Date createDate;
     private String createdDate;
-    private List<Date> updateDate;
-    private List<String> updatedDate;
+    private Date updateDate;
+    private String updatedDate;
     private String updateCount;
     private String initiativeId;
     private String initiativeName;
     private String userUniqueCode;
-
-
-
 
 }
